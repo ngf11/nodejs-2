@@ -13,3 +13,10 @@ console.log(path.basename(__dirname));
 console.log(path.extname(__filename));
 
 console.log(path.parse(__filename));
+
+// const math = require("./math");
+// console.log(math.add(2, 2));
+//
+//or
+const { add, multiply, subtract, divide } = require("./math");
+console.log(add(2, 2));
