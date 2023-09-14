@@ -12,10 +12,23 @@ fs.readFile(
 );
 console.log("Hello...");
 
-fs.writeFile(path.join(__dirname, "files", "reply.txt"), (err) => {
-  if (err) throw err;
-  console.log(data);
-});
+fs.writeFile(
+  path.join(__dirname, "files", "reply.txt"),
+  "Nice to meet you",
+  (err) => {
+    if (err) throw err;
+    console.log("Write Completed");
+
+    fs.appendFile(
+      path.join(__dirname, "files", "reply.txt"),
+      `\n\nYes  it is!!`,
+      (err) => {
+        if (err) throw err;
+        console.log("Append Completed");
+      }
+    );
+  }
+);
 
 //exit uncaught error
 process.on("uncaughtException", (err) => {
