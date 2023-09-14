@@ -1,6 +1,39 @@
-const fs = require("fs");
+const fsPromises = require("fs").promises;
 const path = require("path");
 const { exit } = require("process");
+const fileOps = async () => {
+  try {
+    const data = await fsPromises.readFile(
+      path.join(__dirname, "files", "started.txt"),
+      "utf8"
+    );
+    await fsPromises.writeFile(
+      path.join(__dirname, "files", "promiseWrite.txt"),
+      data
+    );
+    await fsPromises.appendFile(
+      path.join(__dirname, "files", "promiseWrite.txt"),
+      "\n\n Nice to meet you"
+    );
+    await fsPromises.rename(
+      path.join(__dirname, "files", "promiseWrite.txt"),
+      path.join(__dirname, "files", "promiseCompleted.txt")
+    );
+    const Newdata = await fsPromises.readFile(
+      path.join(__dirname, "files", "promiseCompleted.txt"),
+      "utf8"
+    );
+    console.log(Newdata);
+    console.log(data);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+fileOps();
+
+/* 
+verion one. callback hell
 
 fs.readFile(
   path.join(__dirname, "files", "started.txt"),
@@ -10,7 +43,6 @@ fs.readFile(
     console.log(data);
   }
 );
-console.log("Hello...");
 
 fs.writeFile(
   path.join(__dirname, "files", "reply.txt"),
@@ -37,7 +69,7 @@ fs.writeFile(
       }
     );
   }
-);
+); */
 
 //exit uncaught error
 process.on("uncaughtException", (err) => {
