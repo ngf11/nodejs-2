@@ -20,5 +20,6 @@ console.log(path.extname(__dirname));
 console.log("------");
 console.log(path.parse(__filename));
 
-const math = require("./math.js");
-console.log(math.add(2, 2));
+// const math = require("./math.js");
+const { add, subtract, multiply, divie } = require("./math");
+console.log(add(2, 2));
