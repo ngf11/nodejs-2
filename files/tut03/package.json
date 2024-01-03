@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "date-fns": "^3.0.6",
+    "uuid": "^9.0.1"
+  },
+  "name": "tut03",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": " "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
