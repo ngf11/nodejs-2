@@ -1,0 +1,19 @@
+express notes 
+
+//chaning route handelers
+const one = (request, response, next) => {
+  console.log("one");
+  next();
+};
+
+const two = (request, response, next) => {
+  console.log("two");
+  next();
+};
+
+const three = (request, response) => {
+  console.log("Three");
+  response.send("finished");
+};
+//This how you will use these three fucntions
+app.get("/chain(.html)?", [one, two, three]);

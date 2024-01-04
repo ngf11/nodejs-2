@@ -1,9 +1,10 @@
 {
   "dependencies": {
     "date-fns": "^3.0.6",
+    "express": "^4.18.2",
     "uuid": "^9.0.1"
   },
-  "name": "tut05",
+  "name": "tut06",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
