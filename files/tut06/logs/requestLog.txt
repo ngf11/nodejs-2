@@ -1,0 +1,6 @@
+01042024	12:09:00	c1a88637-9d79-4f58-ad4f-870efb8e9517	/new-page.html	GET
+01042024	12:09:00	12c31b44-e27b-4af3-a588-da0d19680a72	/css/style.css	GET
+01042024	12:09:00	535f0150-f7b8-4a78-937f-fb6b459f7f13	/img/ahhhhh.png	GET
+01042024	12:12:27	cee3b806-5005-4a9b-83e7-4e7136d90dd8	/new-page.html	GET
+01042024	12:12:27	da6b9a43-ffb9-417e-8b74-df5bad51d1db	/css/style.css	GET
+01042024	12:12:27	b8510931-3fc6-45dc-90a9-7f55de4d1b55	/img/ahhhhh.png	GET
