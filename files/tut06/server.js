@@ -11,11 +11,25 @@ app.use(logger);
 //third party middelware. allows other request for other partys since  this is running locally
 //cors = Cross Origin Resource Sharing
 const whitelist = [
-  "htts://nicolasfuentes.dev",
-  "http://localhost:3500",
+  "https://nicolasfuentes.dev",
+  "http://localhost:3500/",
   "http://127.0.0.1:5500/",
-]; //whitelist typically refers to a list of allowed IP addresses or origins that are permitted to interact with your server. you leave your site after develpent but while working you should leave port you are working whit and live server port.
-app.use(cors()); // leaving open wiht just this. API open to the public. for many applications this not what you want. creat whitelist
+  "https://www.google.com/",
+];
+//whitelist typically refers to a list of allowed IP addresses or origins that are permitted to interact with your server. you leave your site after develpent but while working you should leave port you are working whit and live server port.
+//function that allows cors not prevent whitlist
+const corsOptions = {
+  origin: (origin, callback) => {
+    //if the domain is the white list. Then we are going to let it pass. else erro
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true); //null=error/ in this case no erro.if no error let it pass hance "ture" tham means the origin will be sent back. yes that is the same origin
+    } else {
+      callback(new Error("Not Allowed by Cors"));
+    }
+  },
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions)); // leaving open wiht just this. API open to the public. for many applications this not what you want. creat whitelist
 
 //built in middelware to handel urlencoded data in other words; from data:
 //content-Type: application/x-www-from-urluncoded
