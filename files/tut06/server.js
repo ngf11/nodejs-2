@@ -14,7 +14,7 @@ const whitelist = [
   "htts://nicolasfuentes.dev",
   "http://localhost:3500",
   "http://127.0.0.1:5500/",
-]; //whitelist typically refers to a list of allowed IP addresses or origins that are permitted to interact with your server. you leave your site after develpent but
+]; //whitelist typically refers to a list of allowed IP addresses or origins that are permitted to interact with your server. you leave your site after develpent but while working you should leave port you are working whit and live server port.
 app.use(cors()); // leaving open wiht just this. API open to the public. for many applications this not what you want. creat whitelist
 
 //built in middelware to handel urlencoded data in other words; from data:
