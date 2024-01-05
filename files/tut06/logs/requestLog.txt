@@ -6,3 +6,27 @@
 01042024	12:12:27	b8510931-3fc6-45dc-90a9-7f55de4d1b55	/img/ahhhhh.png	GET
 01042024	12:25:04	b0349a8a-b8bf-4147-afec-37575b4522bf	/	GET
 01042024	12:25:04	ef321cfc-eb6e-42c4-9f2b-e453aa6d6425	/css/style.css	GET
+01052024	13:15:11	29896674-329c-457d-be82-7f8419c82faf	GET	undefined	/
+01052024	13:15:11	116a5ebf-3198-45a7-8095-9b478d1d9986	GET	undefined	/css/style.css
+01052024	13:15:13	f1e4c09f-aefa-4b20-8a87-127dc9c30ee2	GET	undefined	/
+01052024	13:15:13	2c0b0fb3-0cca-4fe3-ade1-ed1e8f497ae7	GET	undefined	/css/style.css
+01052024	13:15:18	cde93b6a-e094-436a-97ab-6d0991c2a862	GET	undefined	/new-page.html
+01052024	13:15:18	17225fc0-c977-4225-b8ed-403743b90038	GET	undefined	/css/style.css
+01052024	13:15:18	aa3f10c7-4bc9-4762-af40-8147f4e644ee	GET	undefined	/img/ahhhhh.png
+01052024	13:21:20	99a62af2-f798-40a4-b61f-4c4eef87da40	GET	undefined	/new-page.html
+01052024	13:21:20	1e4c5d35-c1eb-4ad3-8a2f-9388c9e0564f	GET	undefined	/css/style.css
+01052024	13:21:20	a7cffd95-f597-45a9-b28b-e5149799c8e9	GET	undefined	/img/ahhhhh.png
+01052024	13:21:30	0b41f66f-c6f2-4a03-9a56-2579b627c92d	GET	undefined	/new
+01052024	13:21:30	f4747506-8357-406a-9a66-b7192be168f1	GET	undefined	/css/style.css
+01052024	13:21:42	91fb03a8-b8b5-466a-9d62-e69df9dd02a4	GET	undefined	/
+01052024	13:21:42	acec6a57-02d4-45ea-a446-751fb8453ad7	GET	undefined	/css/style.css
+01052024	13:25:12	f83f4fdc-c50c-405a-b72b-79966391742f	GET	https://www.google.com	/
+01052024	13:26:04	d8ead36f-c139-4a5b-8522-4700f635fc55	GET	undefined	/
+01052024	13:26:04	24df7560-f69f-48c4-95a6-697608109db5	GET	undefined	/css/style.css
+01052024	13:26:39	bd847a8c-cd13-4dc1-897e-558c411f391a	OPTIONS	https://www.google.com	/
+01052024	13:26:39	45377ee5-2b60-48ac-8c1c-300a0a64cbac	GET	https://www.google.com	/
+01052024	13:26:43	77068f08-9145-4988-a838-5821ff77fd40	GET	undefined	/
+01052024	13:26:43	8b994d4c-cc77-408f-830c-bda126cd846a	GET	undefined	/css/style.css
+01052024	13:26:43	45cdbaed-404d-4f05-82e6-1fa46b2bce59	GET	undefined	/favicon.ico
+01052024	13:35:19	73a651f2-d333-4302-913f-b25da639b6b0	OPTIONS	https://www.google.com	/
+01052024	13:35:19	455a4a54-f2c6-4ec8-8f7c-8fb1561e292f	GET	https://www.google.com	/

@@ -1,13 +1,21 @@
 const express = require("express");
-const path = require("path");
 const app = express(); //server
+const path = require("path");
+const cors = require("cors");
+const { logEvents, logger } = require("./middleware/logEvents");
 const PORT = process.env.PORT || 3500;
 
 //custum  middelware logger
-app.use((request, response, next) => {
-  console.log(`${request.method} ${request.path}`);
-  next();
-});
+app.use(logger);
+
+//third party middelware. allows other request for other partys since  this is running locally
+//cors = Cross Origin Resource Sharing
+const whitelist = [
+  "htts://nicolasfuentes.dev",
+  "http://localhost:3500",
+  "http://127.0.0.1:5500/",
+]; //whitelist typically refers to a list of allowed IP addresses or origins that are permitted to interact with your server. you leave your site after develpent but
+app.use(cors()); // leaving open wiht just this. API open to the public. for many applications this not what you want. creat whitelist
 
 //built in middelware to handel urlencoded data in other words; from data:
 //content-Type: application/x-www-from-urluncoded
