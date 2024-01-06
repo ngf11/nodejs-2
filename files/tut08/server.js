@@ -37,35 +37,12 @@ app.use(express.urlencoded({ extended: false }));
 //built-in middelware for json
 app.use(express.json());
 
-//servers static fiels
+//servers static fiels & route
 app.use(express.static(path.join(__dirname, "/public")));
+app.use("/subdir", express.static(path.join(__dirname, "/public"))); // adds the styles and imgs when serving pages from subdir
 
-// root GET || GET new page
-app.get("^/$|/index(.html)?", (request, response) => {
-  // response.sendFile("./views/index.html", { root: __dirname });
-  response.sendFile(path.join(__dirname, "views", "index.html"));
-});
-
-app.get("/new-page(.html)?", (request, response) => {
-  response.sendFile(path.join(__dirname, "views", "new-page.html"));
-});
-
-//Handeling redirect
-
-app.get("/old-page(.html)?|/old-case(.html)? ", (request, response) => {
-  response.redirect(301, "/new-page.html"); // 302 by defult
-});
-//route hadelrs. handelres chained
-app.get(
-  "/hello(.html)",
-  (request, response, next) => {
-    console.log("Attempted to load hello.html");
-    next();
-  },
-  (request, response) => {
-    response.send("Hello world");
-  }
-); // you can keep changing nexts()
+app.use("/", require("./routes/root"));
+app.use("/subdir", require("./routes/subdir")); // this will route any request that comes form the sub directory
 
 //deafult catch all
 app.all("*", (request, response) => {
@@ -79,10 +56,6 @@ app.all("*", (request, response) => {
   }
 });
 
-// app.use(function (error, request, response, next) {
-//   console.error(error.stack);
-//   response.status(500).send(error.message);
-// });
 app.use(errorHandeler);
 
 //custum  middelware logger
