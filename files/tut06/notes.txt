@@ -17,3 +17,21 @@ const three = (request, response) => {
 };
 //This how you will use these three fucntions
 app.get("/chain(.html)?", [one, two, three]);
+
+
+
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
+
+
+.use is for middelware and doe snot accept regEx
+.all is more for routing and will apply to all http methods 

@@ -3,6 +3,7 @@ const app = express(); //server
 const path = require("path");
 const cors = require("cors");
 const { logEvents, logger } = require("./middleware/logEvents");
+const errorHandeler = require("./middleware/errorHandeler");
 const PORT = process.env.PORT || 3500;
 
 //custum  middelware logger
@@ -10,21 +11,18 @@ app.use(logger);
 
 //third party middelware. allows other request for other partys since  this is running locally
 //cors = Cross Origin Resource Sharing
-const whitelist = [
-  "https://nicolasfuentes.dev",
-  "http://localhost:3500/",
-  "http://127.0.0.1:5500/",
-  "https://www.google.com/",
-];
+const whitelist = ["http://localhost:3500/", "http://127.0.0.1:5500/"];
 //whitelist typically refers to a list of allowed IP addresses or origins that are permitted to interact with your server. you leave your site after develpent but while working you should leave port you are working whit and live server port.
 //function that allows cors not prevent whitlist
+
 const corsOptions = {
   origin: (origin, callback) => {
-    //if the domain is the white list. Then we are going to let it pass. else erro
-    if (whitelist.indexOf(origin) !== -1) {
+    //if the domain is the white list. Then we are going to let it pass. else err
+
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
       callback(null, true); //null=error/ in this case no erro.if no error let it pass hance "ture" tham means the origin will be sent back. yes that is the same origin
     } else {
-      callback(new Error("Not Allowed by Cors"));
+      callback(new Error("Not allowed by CORS"));
     }
   },
   optionsSuccessStatus: 200,
@@ -70,9 +68,22 @@ app.get(
 ); // you can keep changing nexts()
 
 //deafult catch all
-app.get("/*", (request, response) => {
-  response.status(404).sendFile(path.join(__dirname, "views", "404.html"));
+app.all("*", (request, response) => {
+  response.status(404);
+  if (request.accepts("html")) {
+    response.sendFile(path.join(__dirname, "views", "404.html"));
+  } else if (request.accepts("json")) {
+    response.json({ error: "404 Not found" });
+  } else {
+    response.type("txt").send("404 Not found");
+  }
 });
+
+// app.use(function (error, request, response, next) {
+//   console.error(error.stack);
+//   response.status(500).send(error.message);
+// });
+app.use(errorHandeler);
 
 //custum  middelware logger
 app.use((req, res, next) => {
