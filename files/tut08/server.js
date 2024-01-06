@@ -41,9 +41,10 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "/public")));
 app.use("/subdir", express.static(path.join(__dirname, "/public"))); // adds the styles and imgs when serving pages from subdir
 
+//routes
 app.use("/", require("./routes/root"));
 app.use("/subdir", require("./routes/subdir")); // this will route any request that comes form the sub directory
-
+app.use("/employees", require("./routes/api/employees"));
 //deafult catch all
 app.all("*", (request, response) => {
   response.status(404);
