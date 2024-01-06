@@ -1,1 +1,4 @@
 01052024	21:01:04	80a24ba2-701f-4216-b438-26b01348c03c	Error: Not allowed by CORS
+01062024	17:46:45	abcb4358-74c2-4d07-b404-231b6f05c150	TypeError: response.json(...).put is not a function
+01062024	17:47:26	70e9e1b1-57b3-4b8c-8863-59121ccb244d	TypeError: response.json(...).put is not a function
+01062024	17:49:02	9aaceb5a-660b-4d7a-8cc6-58302bd663a1	TypeError: response.json(...).put is not a function

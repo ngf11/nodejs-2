@@ -121,3 +121,17 @@
 01052024	23:25:10	b4e75cb8-ac62-47df-95f9-5920b92f0621	GET	undefined	/img/ahhhhh.png
 01052024	23:25:31	4e2f5d54-fbc5-43f3-9689-081996f1b895	GET	undefined	/
 01052024	23:25:32	7d26bf31-7b1a-49f0-a70a-42a504e0d675	GET	undefined	/css/style.css
+01062024	17:41:49	de83b780-33b1-407e-9bb5-7fdab272a7a4	GET	undefined	/emploeeys
+01062024	17:41:49	350446f6-3601-430e-b2b1-fb1f2d6c1c10	GET	undefined	/css/style.css
+01062024	17:42:58	fd4a1aff-b2d4-42b1-bb0f-b2b6d3c80d7d	GET	undefined	/employees
+01062024	17:44:47	2af047fa-6748-468e-b95e-dbe932f2fa97	GET	undefined	//routes/api/employees
+01062024	17:44:47	7e5a495e-abc4-4279-a21e-b004003c6e23	GET	undefined	//routes/api/css/style.css
+01062024	17:44:49	bf07a6c4-d0da-4c2e-a01f-6903050deea3	GET	undefined	//routes/api/employees
+01062024	17:44:49	018b54d6-bfad-43f0-b590-d5d8acaedbaf	GET	undefined	//routes/api/css/style.css
+01062024	17:46:01	ab724f41-2cf3-42d8-bf74-1c15754d8115	GET	undefined	/employees
+01062024	17:46:45	f2ddecf7-510f-49cc-bd90-e887e419bbe5	POST	undefined	/employees
+01062024	17:46:51	4ce43b56-069e-4f76-b125-08b74d677fb2	PUT	undefined	/employees
+01062024	17:47:02	7cf4446c-3310-4e31-8ea4-84a8bcd596bf	DELETE	undefined	/employees
+01062024	17:47:26	988b7fab-6b2f-4482-82c7-48b965b800af	POST	undefined	/employees
+01062024	17:49:02	5185bb22-bbb5-44db-95b9-396b31a60f82	POST	undefined	/employees
+01062024	17:51:14	e002aa95-9478-41b9-9396-a655d06e4eed	GET	undefined	/employees/1
