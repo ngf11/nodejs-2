@@ -1,0 +1,1 @@
+01052024	21:01:04	80a24ba2-701f-4216-b438-26b01348c03c	Error: Not allowed by CORS

@@ -1,0 +1,3 @@
+.use is for middelware and doe snot accept regEx
+.all is more for routing and will apply to all http methods 
+routing: i breacking file routs out into indivitual routers. They are esentianly mini servers for each specific rout 
