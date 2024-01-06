@@ -40,6 +40,7 @@ app.use(express.json());
 //servers static fiels
 app.use(express.static(path.join(__dirname, "/public")));
 
+//page's routers
 // root GET || GET new page
 app.get("^/$|/index(.html)?", (request, response) => {
   // response.sendFile("./views/index.html", { root: __dirname });
