@@ -1,5 +1,5 @@
-.use is for middelware 
-.all is more for routing and will apply to all http methods 
-routing: i breacking file routs out into indivitual routers. They are esentianly mini servers for each specific rout or mini apps
+User Authotication requires two routes 
+- a regeistration route 
+- and a Authotication route after the have created an account 
 
-3.34mins
+Here we need to install bcrypt. it will help us hash and salt the paswords that they come  in  so we can securly and safly save them in our data
