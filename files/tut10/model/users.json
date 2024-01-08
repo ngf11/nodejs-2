@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "username": "nico11",
+    "password": "$2b$10$6gD1Jf/sV88Ne5Ku/qG7iuh.c0oWNJCCaeUP0VQBhx7tvdTLNIO/e"
+  },
+  {
+    "username": "nico1",
+    "password": "$2b$10$r.j4604Wz0WgXGgT..mSL.s/r5OlV7ba4pbBsg7dJDCg.3XWpeL3u"
+  },
+  {
+    "username": "ngf11",
+    "password": "$2b$10$iv79jrghWrVgvwUveg8ysun5sH/DwlFOW/eveyspqx2x7jcKwDCoC"
+  }
+]

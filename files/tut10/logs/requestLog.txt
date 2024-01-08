@@ -143,3 +143,10 @@
 01072024	20:28:18	1ce92c3c-3020-43f4-959c-cb7e07de5ed7	POST	undefined	/employees
 01072024	20:29:31	fb542357-72d8-4194-8824-4ede8217bdc2	DELETE	undefined	/employees
 01072024	20:31:45	c49bd721-6895-4957-b334-013d33506be7	GET	undefined	/employees/1
+01082024	14:07:49	dd17f2b6-fcb8-4967-b6ac-8b754268482b	POST	undefined	/register
+01082024	14:09:08	8d363408-5c04-454c-b701-1962df41f867	POST	undefined	/register
+01082024	14:10:46	9e718f65-6c71-4531-829e-5b44584e6ef9	POST	undefined	/register
+01082024	14:11:48	dd336b58-861b-40ea-a549-4aa4d850e5df	POST	undefined	/register
+01082024	14:12:26	b90bb38f-c673-46d3-8251-5b3532ed2a7a	POST	undefined	/register
+01082024	14:12:39	2801d8f7-52fc-4ade-b642-198c34139b5a	POST	undefined	/register
+01082024	14:15:16	52be6de1-334d-429a-acc2-467ae7271fff	POST	undefined	/register

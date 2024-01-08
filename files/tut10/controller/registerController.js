@@ -30,10 +30,10 @@ const handleNewUser = async (req, res) => {
     usersDB.setUsers([...usersDB.users, newUser]);
     //lets write to our Json file. this our data base
     await fsPromises.writeFile(
-      path.join(__dirname, "..", "model", "user.json"),
+      path.join(__dirname, "..", "model", "users.json"),
       JSON.stringify(usersDB.users)
     );
-    conosol.log(usersDB.users);
+    console.log(usersDB.users);
     res.status(201).json({ success: `New user ${user} created` }); // new user was created
   } catch (err) {
     res.status(500).json({ message: err.message }); //server Erro

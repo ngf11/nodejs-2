@@ -25,6 +25,7 @@ app.use(express.static(path.join(__dirname, "/public")));
 
 //routes
 app.use("/", require("./routes/root"));
+app.use("/register", require("./routes/register"));
 
 app.use("/employees", require("./routes/api/employees"));
 //deafult catch all
@@ -43,7 +44,7 @@ app.use(errorHandeler);
 
 //custum  middelware logger
 app.use((req, res, next) => {
-  consoles.log(`${req.method} ${req.path}`);
+  console.log(`${req.method} ${req.path}`);
   next();
 });
 
