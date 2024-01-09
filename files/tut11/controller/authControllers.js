@@ -6,6 +6,11 @@ const usersDB = {
 };
 const bcrypt = require("bcrypt");
 
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
+const fsPromises = require("fs").promises;
+const path = require("path");
+
 const handelLogin = async (req, res) => {
   const { user, pwd } = req.body;
   if (!user || !pwd)
@@ -19,7 +24,34 @@ const handelLogin = async (req, res) => {
   const match = await bcrypt.compare(pwd, foundUser.password);
   if (match) {
     //create JWTs
-    res.json({ success: `User: ${user} is logged in` });
+    //access token. the first need to pass is a payload. Whaty are we going to use is our user object. You dont need want to pass in anything like a password anything that other wise will hurt your security because this is availableto all if they get a hold of your tokens. So what we want to pass in is your username
+    const accessToken = jwt.sign(
+      { username: foundUser.username },
+      process.env.ACCESS_TOKEN_SECRET,
+      { expiresIn: "30s" } //15 to 5 mins
+    );
+    const refreshToken = jwt.sign(
+      { username: foundUser.username },
+      process.env.REFRESH_TOKEN_SECRET,
+      { expiresIn: "1d" } //15 to 5 mins
+    );
+    //this creats an array of other users.
+    //saving refreshToken with current user
+    const otherUsers = usersDB.users.filter(
+      (person) => person.username !== foundUser.username
+    );
+    const currentUser = { ...foundUser, refreshToken };
+    usersDB.setUsers([...otherUsers, currentUser]);
+    await fsPromises.writeFile(
+      path.join(__dirname, "..", "model", "users.json"),
+      JSON.stringify(usersDB.users)
+    );
+    res.cookie("jwt", refreshToken, {
+      httpOnly: true,
+      maxAge: 24 * 60 * 60 * 1000,
+    }); // this is in milseconds  equation eualas  day
+    res.json({ accessToken });
+    // as a fornt end developer or fullstack developer you want to store that access token in memory. if we save it as json is vonurable. we are going to save as a cookie. I know we said this a bad practies. BUt if we set the cookie as http only it is not avelible to javascript
   } else {
     res.sendStatus(401);
   }
