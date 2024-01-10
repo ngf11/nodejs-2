@@ -1,34 +1,26 @@
-JWT auth
-Json we tokens
-- Protects routes
-- They can be viwed as user identifications 
-. that is issued after authotication takes place 
-when a use completes their log-in process and they are authoticated 
-our rest api will issue the client application an access token and a refresh token 
-Access token  = Short time
-refresh token  = Long term 
- The access token is given a short time before it expires for example 5 to 15 mins.  The refresh token is given a longer duration; possibly several hours.
- __Hazards__
- XSS: Cross-Site Scripting 
- CSFR : Cross-Sites request Forgery
- Our API will send and recive access tokens as Json data to avoid the previusly mention risks. It is recomened for frontend cliant applications to only store access tokens in memory so they will be automaticly lost when the app is closed they should not be stored in local storage or in a cookie. Essentialy if you could store it somewhere with javaScript a hacker can also retive it.
- Just keep access tokens in memory.This may also be refer as the current application state
+authotication vs. Authorization 
 
- Our Api will issue refresh tokens in a http cookie this type of cookie is not accessable with javaScript. Refresh tookns do need an experation. Which it will the require users to log in agian.Refresh tokens should not have the ability to issue new refresh tokens; because that Essentially grants indfinate access if a refresh token falls in to the wrong hands 
- The overall access process involves 
- Access Token 
- -issued at  Auth 
- -Cliant uses for API Access unit expires
- -Verified with Middleware
- -New token issue at refresh request
+They are offten used interchangably or simply as "auth"
+But they are not the same thing.
+--authotication:
+refers to the process of verifying  who someone is 
 
- Refresh Token
- -issue at auth
- -client uses to request new access Token
- -Verified with end point and database 
- -must be allowed to expierd or logout
+--Authorization:
+is the process verifying what resourses a user has access to 
 
+when we login with username and password we are verifying who we are and that is consider to be authotication
 
- 
-node
- require("crypto").randomBytes(64).toString('hex')
+after login in our express api issues user JWT tokens.
+JWTs = Json web tokens 
+>confirms authotication
+>Allow access to API endpoints
+>endpoints provide data resourses
+>Use Authorization header
+----------
+here we are going to expand the user the user authotication process by 
+adding user rolls with spesific permissions to our api authotication
+process
+--User rolls and permissions
+> provide diferent levels of access 
+> sent in access token payload
+>Verified with Middleware
