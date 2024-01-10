@@ -7,10 +7,15 @@ const { logEvents, logger } = require("./middleware/logEvents");
 const errorHandeler = require("./middleware/errorHandeler");
 const verifyJWT = require("./middleware/verifyJWT");
 const cookieParser = require("cookie-parser");
+const credentials = require("./middleware/credentials");
 const PORT = process.env.PORT || 3500;
 
 //custum  middelware logger
 app.use(logger);
+
+// handel options credential check -- before CORS
+//and fetch cookies credentials requirement
+app.use(credentials);
 
 app.use(cors(corsOptions)); // leaving open wiht just this. API open to the public. for many applications this not what you want. creat whitelist
 

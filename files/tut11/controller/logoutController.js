@@ -19,7 +19,7 @@ const handelLogout = async (req, res) => {
   if (!foundUser) {
     //this is how we clear the cookie first
     //if we didnt have a foundUser but we did have a cookie. we can earse it like it was sent
-    res.clearCookie("jwt", { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 }); //pass the same options it was sent with in obj
+    res.clearCookie("jwt", { httpOnly: true, sameSite: "none", secure: true }); //pass the same options it was sent with in obj
     return res.sendStatus(204); // succesful but no content
   }
   //Delete the refresh token  in the data base. we are using file system for that insted of mongol
@@ -34,7 +34,11 @@ const handelLogout = async (req, res) => {
     JSON.stringify(usersDB.users)
   );
   //delete the cookie
-  res.clearCookie("jwt", { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 });
+  res.clearCookie("jwt", {
+    httpOnly: true,
+    sameSite: "none",
+    secure: true,
+  });
   //in production when we send the cookie or when we delte the cookie we will alson want to add the flag // secure: true //this only servers on https.
   //here we are using a http conection in dev production. we wont addthis in develpment // secure: true // but in production
   //send our statust agian
