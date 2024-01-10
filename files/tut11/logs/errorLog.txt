@@ -2,3 +2,8 @@
 01062024	17:46:45	abcb4358-74c2-4d07-b404-231b6f05c150	TypeError: response.json(...).put is not a function
 01062024	17:47:26	70e9e1b1-57b3-4b8c-8863-59121ccb244d	TypeError: response.json(...).put is not a function
 01062024	17:49:02	9aaceb5a-660b-4d7a-8cc6-58302bd663a1	TypeError: response.json(...).put is not a function
+01102024	11:07:53	7bbede82-952b-42c2-8072-c8d8dffc1f78	TypeError: res.SendStatus is not a function
+01102024	11:11:12	f1be5c22-dff7-4af1-901c-bd9d1403cc43	TypeError: res.SendStatus is not a function
+01102024	11:11:13	7ab9149c-dffc-46c6-b4ab-e28127a8296a	TypeError: res.SendStatus is not a function
+01102024	11:13:14	316015cd-013e-4bfa-bae0-9b785f455801	TypeError: res.SendStatus is not a function
+01102024	11:13:19	bf059a2a-0e0d-430c-8ad2-b805368f9ea4	TypeError: res.SendStatus is not a function
