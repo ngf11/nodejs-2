@@ -25,7 +25,11 @@ const handleNewUser = async (req, res) => {
     // we use bcrypt inside of that we use the pwd we recive from the user inside we determn the  salt rounds. this helps protect the pswords in case if your DB is compremise. if hacker was able to figure out the hash. by adding the salts it makes alot more dificult we are goign to pass 10 salt rounds
     const hashedPWD = await bcrypt.hash(pwd, 10);
     ///sotre new users
-    const newUser = { username: user, password: hashedPWD };
+    const newUser = {
+      username: user,
+      roles: { User: 2001 },
+      password: hashedPWD,
+    };
     //set our new data. here we will pass all the data that we have
     usersDB.setUsers([...usersDB.users, newUser]);
     //lets write to our Json file. this our data base

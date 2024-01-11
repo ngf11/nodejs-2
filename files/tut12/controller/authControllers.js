@@ -25,10 +25,19 @@ const handelLogin = async (req, res) => {
   //if user found evaluate password
   const match = await bcrypt.compare(pwd, foundUser.password);
   if (match) {
+    //once we have a match we wan to look at our roles
+    const roles = Object.values(foundUser.roles); // here we can ge those values inside of roles
     //create JWTs
-    //access token. the first need to pass is a payload. Whaty are we going to use is our user object. You dont need want to pass in anything like a password anything that other wise will hurt your security because this is availableto all if they get a hold of your tokens. So what we want to pass in is your username
+    //access token. the first need to pass is a payload. What are we going to use is our user object. You dont need want to pass in anything like a password anything that other wise will hurt your security because this is availableto all if they get a hold of your tokens. So what we want to pass in is your username
+    //token payloads
     const accessToken = jwt.sign(
-      { username: foundUser.username },
+      {
+        //private JWT claim
+        userInfo: {
+          username: foundUser.username,
+          roles: roles,
+        },
+      },
       process.env.ACCESS_TOKEN_SECRET,
       { expiresIn: "30s" } //15 to 5 mins
     );
