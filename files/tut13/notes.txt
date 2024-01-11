@@ -1,0 +1,26 @@
+authotication vs. Authorization 
+
+They are offten used interchangably or simply as "auth"
+But they are not the same thing.
+--authotication:
+refers to the process of verifying  who someone is 
+
+--Authorization:
+is the process verifying what resourses a user has access to 
+
+when we login with username and password we are verifying who we are and that is consider to be authotication
+
+after login in our express api issues user JWT tokens.
+JWTs = Json web tokens 
+>confirms authotication
+>Allow access to API endpoints
+>endpoints provide data resourses
+>Use Authorization header
+----------
+here we are going to expand the user the user authotication process by 
+adding user rolls with spesific permissions to our api authotication
+process
+--User rolls and permissions
+> provide diferent levels of access 
+> sent in access token payload
+>Verified with Middleware
