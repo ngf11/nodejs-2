@@ -33,7 +33,7 @@ const handelLogin = async (req, res) => {
     const accessToken = jwt.sign(
       {
         //private JWT claim
-        userInfo: {
+        UserInfo: {
           username: foundUser.username,
           roles: roles,
         },
