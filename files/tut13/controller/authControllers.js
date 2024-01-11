@@ -8,8 +8,6 @@ const bcrypt = require("bcrypt");
 const { NONAME } = require("dns");
 
 const jwt = require("jsonwebtoken");
-
-require("dotenv").config();
 const fsPromises = require("fs").promises;
 const path = require("path");
 

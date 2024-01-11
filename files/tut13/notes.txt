@@ -1,26 +1,22 @@
-authotication vs. Authorization 
+--MongoDB and Mongoose--
+ MongoDB is the data base in the MERN stack  "M"
+ the fontend is handel by React
 
-They are offten used interchangably or simply as "auth"
-But they are not the same thing.
---authotication:
-refers to the process of verifying  who someone is 
+ Traditonal SQL databases are built  in a relational structure 
+ relational tables referenc eachother with joins as data is query
+ these relational tables also normalize the data means data is not duplicated in the tables  thats the "D.R.Y" princeple  "Don't repat yourself" and thats is apply to the structure 
 
---Authorization:
-is the process verifying what resourses a user has access to 
+ however with NOsql databases you can thorw all of that out.
 
-when we login with username and password we are verifying who we are and that is consider to be authotication
+ MongoDB stores data in colections 
+ the indivitual reacord in collections are called documents 
+ the documents have key value structure and look alot like json 
 
-after login in our express api issues user JWT tokens.
-JWTs = Json web tokens 
->confirms authotication
->Allow access to API endpoints
->endpoints provide data resourses
->Use Authorization header
-----------
-here we are going to expand the user the user authotication process by 
-adding user rolls with spesific permissions to our api authotication
-process
---User rolls and permissions
-> provide diferent levels of access 
-> sent in access token payload
->Verified with Middleware
+ A collections holds all of the data about a user for example insted of breaking into related tables and likewise duplicating and distrubuting the data where deemed necessary in a NOsql structure is permieted 
+
+ So why chooes NOsql databases??
+ Advatages:
+ -Peformance - is key. The speed that a colection is queried is very fast
+ - Flexability - its very easy to make structual changes. Like adding a new feild with out wreaking havoc. Is much like adding a new property to an object.
+- scalability - it can suport large databases with high request rates at a very low latency 
+-usablity - we can get up an running with mongoldb very fast 
