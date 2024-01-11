@@ -4,7 +4,7 @@ require("dotenv").config();
 const verifyJWT = (req, res, next) => {
   const authHeader = req.headers.authorization || req.headers.Authorization;
   //bearer token
-  if (!authHeader?.stratsWith("Bearer ")) return res.sendStatus(401);
+  if (!authHeader?.startsWith("Bearer ")) return res.sendStatus(401);
   const token = authHeader.split(" ")[1]; //at the split after the space " " in the one position
   //verefiy token/ decoding token
   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {

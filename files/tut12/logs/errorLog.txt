@@ -7,3 +7,15 @@
 01102024	11:11:13	7ab9149c-dffc-46c6-b4ab-e28127a8296a	TypeError: res.SendStatus is not a function
 01102024	11:13:14	316015cd-013e-4bfa-bae0-9b785f455801	TypeError: res.SendStatus is not a function
 01102024	11:13:19	bf059a2a-0e0d-430c-8ad2-b805368f9ea4	TypeError: res.SendStatus is not a function
+01112024	11:56:26	283b9167-82ff-4700-a719-eca553e312a1	TypeError: authHeader?.stratsWith is not a function
+01112024	11:56:39	2d7246e8-65d6-4d40-97be-02de13c34158	TypeError: authHeader?.stratsWith is not a function
+01112024	11:57:40	29401e6a-68ca-435b-ab7f-76ab863e291d	TypeError: authHeader?.stratsWith is not a function
+01112024	11:57:41	c71f46aa-3eea-43bc-86bf-452eb42fa10e	TypeError: authHeader?.stratsWith is not a function
+01112024	11:57:42	d8af7ee5-496a-4770-ae23-fa3659ca7460	TypeError: authHeader?.stratsWith is not a function
+01112024	11:57:42	3c6f2ed7-9ca2-4283-a9cd-b78805f6c1b6	TypeError: authHeader?.stratsWith is not a function
+01112024	11:57:42	f25c7cfb-4006-4b4f-80df-bdb98dd82fc3	TypeError: authHeader?.stratsWith is not a function
+01112024	11:57:43	f8c96858-2504-4a21-b2af-bc62752cdc68	TypeError: authHeader?.stratsWith is not a function
+01112024	11:58:59	967ff7ab-f281-40e8-83a8-073908a4bb14	TypeError: authHeader?.stratsWith is not a function
+01112024	11:59:22	c49058aa-9570-4d70-9807-038811cb95ad	TypeError: authHeader?.stratsWith is not a function
+01112024	12:00:23	53c4da34-f3fe-48e5-8887-dc089d1cba28	TypeError: authHeader?.stratWith is not a function
+01112024	12:00:49	f2f58ec6-1218-4f27-8b17-c1f1ee7f8a04	TypeError: authHeader?.startWith is not a function
