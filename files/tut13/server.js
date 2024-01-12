@@ -72,7 +72,7 @@ app.use((req, res, next) => {
 });
 
 mongoose.connection.once("open", () => {
-  console.log("connected to mongo DB");
+  console.log("connected to mongoDB");
   // server lisetitng for request
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 });
