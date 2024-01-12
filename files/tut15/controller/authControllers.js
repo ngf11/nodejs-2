@@ -45,7 +45,7 @@ const handelLogin = async (req, res) => {
     res.cookie("jwt", refreshToken, {
       httpOnly: true,
       sameSite: "none",
-      // secure: true,
+      secure: true,
       maxAge: 24 * 60 * 60 * 1000,
     }); // this is in milseconds  equation eualas  day
     res.json({ accessToken });
