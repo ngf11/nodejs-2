@@ -1,4 +1,1 @@
-we use Mongoose to conect our app to conect to MongoDB
-here wwe are making Mongoose schemas it will allow us to peform crud operations 
-on our MongoDB data collections 
-C.R.U.D =creat , read, update, delete
+Async C.R.U.D =creat , read, update, delete
