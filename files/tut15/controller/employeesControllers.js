@@ -22,8 +22,6 @@ const creatNewEmployees = async (req, res) => {
   } catch (err) {
     console.error(err);
   }
-  data.setEmployees([...data.employees, newEmployee]);
-  res.status(201).json(data.employees);
 }; // new emploee
 
 const updateEmployee = async (req, res) => {
