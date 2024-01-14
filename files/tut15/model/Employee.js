@@ -8,7 +8,7 @@ const employeeSchema = new Schema({
   },
   lastname: {
     type: String,
-    required: ture,
+    required: true,
   },
 });
 
