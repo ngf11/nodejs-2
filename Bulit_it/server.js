@@ -1,4 +1,4 @@
-const fsPromises = require("fs");
+const fsPromises = require("fs").promises;
 // console.log(fsPomises);
 const path = require("path");
 // console.log(path);
@@ -7,7 +7,7 @@ const fileOps = async () => {
   try {
     const data = await fsPromises.readFile(path.join("readme.txt"), "utf-8");
     console.log(data);
-    await fsPromises.unlink(path.join("readme.txt")); //Deletes original file
+    // await fsPromises.unlink(path.join("readme.txt")); //Deletes original file
 
     await fsPromises.writeFile(path.join("promiseWrite.txt"), data);
     await fsPromises.appendFile(
